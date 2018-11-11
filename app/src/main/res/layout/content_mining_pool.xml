@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".miningPool"
+    tools:showIn="@layout/activity_mining_pool">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logo"
+        android:src="@mipmap/ic_launcher"
+        android:padding="2dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/poolname"
+        android:text="Ticket:"
+        android:textSize="16dp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/logo"
+        android:padding="1dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/poolhash"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:layout_below="@+id/poolname"
+        android:layout_toRightOf="@+id/logo"
+        android:text="Pool Hash:"
+        android:textSize="16dp"
+        android:padding="1dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nethash"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:layout_below="@+id/poolhash"
+        android:layout_toRightOf="@+id/logo"
+        android:text="Net hash:"
+        android:textSize="16dp"
+        android:padding="1dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/miner"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:layout_below="@+id/nethash"
+        android:layout_toRightOf="@+id/logo"
+        android:text="Miner:"
+        android:textSize="16dp"
+        android:padding="1dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockfound"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:layout_below="@+id/miner"
+        android:layout_toRightOf="@+id/logo"
+        android:text="Block Found:"
+        android:textSize="16dp"
+        android:padding="1dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/diff"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:layout_below="@+id/blockfound"
+        android:layout_toRightOf="@+id/logo"
+        android:text="Difficulty:"
+        android:textSize="16dp"
+        android:padding="1dp"
+        />
+
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/poolhashchart"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/diff">
+    </com.github.mikephil.charting.charts.LineChart>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/pooldiffchart"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/poolhashchart">
+    </com.github.mikephil.charting.charts.LineChart>
+
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/poolminerchart"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/pooldiffchart">
+    </com.github.mikephil.charting.charts.LineChart>
+
+
+
+
+
+
+</RelativeLayout>
